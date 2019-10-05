@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-long calcRepeat(char *str, int k)
+long calcRepeat(char *str, long k)
 {
   int i =0, cnt = 0;
   long res =0;
@@ -33,11 +33,11 @@ long calcRepeat(char *str, int k)
 void main(void)
 {
   char buff[1024] = {'\0'};
-  int  kValue = 0;
+  long  kValue = 0;
   long  result = 0;
   
-  scanf("%s", &buff);
-  scanf("%d", &kValue);
+  scanf("%s", buff);
+  scanf("%ld", &kValue);    // k<=10000000000
   
   result = calcRepeat(buff, kValue);
   printf("%ld", result);
